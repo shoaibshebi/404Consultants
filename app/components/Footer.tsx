@@ -43,7 +43,7 @@ const Footer = () => {
           ))}
         </div>
       </div>
-      <span className='text-gray-400 text-sm'>Let's build</span>
+      <span className='text-gray-400 text-sm'>Let&lsquo;s build</span>
     </div>
   );
 

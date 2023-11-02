@@ -56,7 +56,7 @@ export default function CTA() {
             Ready to Transform your Digital Experience?
           </h1>
           <p className=' text-[#D2D2D2] font-normal w-[45%] mx-auto py-4'>
-            Get in touch with our experts today and let's create something
+            Get in touch with our experts today and let&lsquo;s create something
             extraordinary together!
           </p>
           <div className='my-12 '>
