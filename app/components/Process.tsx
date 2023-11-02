@@ -18,9 +18,9 @@ export default function Process() {
       position: "absolute",
       top: `${Math.random() * 100}%`,
       left: `${Math.random() * 100}%`,
-      width: `${Math.random() * 3 + 1}px`, // Random width between 1px and 4px
-      height: "auto", // Keep the aspect ratio
-      transform: `translate(-50%, -50%)`, // Center the star based on its top and left position
+      width: `${Math.random() * 3 + 1}px`,
+      height: "auto",
+      transform: `translate(-50%, -50%)`,
     };
   };
 
