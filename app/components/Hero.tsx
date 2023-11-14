@@ -9,6 +9,7 @@ const Banner = () => {
   const numberOfStars = 25;
   const isNotMobile = useMediaQuery("(min-width:768px)");
 
+  // TODO: Move this to utils
   const randomStyle = () => {
     return {
       position: "absolute",
@@ -20,7 +21,6 @@ const Banner = () => {
     };
   };
 
-  // Create an array to hold each star's JSX
   const stars = Array.from({ length: numberOfStars }, (_, index) => (
     <img
       alt='Star'
