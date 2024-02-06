@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
 import PrimBtn from "./PrimBtn";
 
 const DrawerBar = ({ isOpen, setIsOpen }: any) => {
@@ -16,7 +15,6 @@ const DrawerBar = ({ isOpen, setIsOpen }: any) => {
         }`}
       >
         <div className='absolute inset-0 bg-gray-600 opacity-75'></div>
-
         <div
           className={`fixed inset-y-0 right-0 max-w-full flex flex-col w-72 bg-rich-blacks-main boxShadow shadow-lg overflow-y-auto rounded-t-lg ${
             isOpen ? "translate-x-0 ease-out" : "translate-x-full ease-in"
@@ -79,5 +77,3 @@ const DrawerBar = ({ isOpen, setIsOpen }: any) => {
 };
 
 export default DrawerBar;
-
-// border-b-2 rounded-none border-white border-opacity-50'

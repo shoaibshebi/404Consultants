@@ -58,7 +58,7 @@ export default function Process() {
         {isNotMobile && (
           <motion.img
             variants={fadeIn("right", "spring", 1, 1)}
-            src={"/icons/Group 26.svg"}
+            src='/icons/Group 26.svg'
             alt='process icons'
             className='absolute top-20 right-[-8%] h-[349px]'
           />
@@ -66,7 +66,7 @@ export default function Process() {
         {isNotMobile && (
           <motion.img
             variants={fadeIn("left", "spring", 0.3, 2)}
-            src={"/icons/Group 27.svg"}
+            src='/icons/Group 27.svg'
             alt='process icons'
             className='absolute top-[45%] left-[-8%] h-[349px]'
           />

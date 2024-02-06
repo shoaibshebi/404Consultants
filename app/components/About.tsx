@@ -1,7 +1,7 @@
 // @ts-nocheck
 "use client";
-import React from "react";
 import { motion } from "framer-motion";
+import React from "react";
 
 import SecBtn from "../Reusable/SecBtn";
 import { cards } from "../utils/data";
