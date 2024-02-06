@@ -63,7 +63,7 @@ export default function Services() {
               <motion.div
                 key={i}
                 className={`${i === 2 ? "ml-24" : ""} ${i === 4 ? "ml-4" : ""}`}
-                variants={zoomIn(0.4 * i, 1)}
+                variants={zoomIn(0.2 * i, 1)}
               >
                 <PlanningTile {...x} />
               </motion.div>
