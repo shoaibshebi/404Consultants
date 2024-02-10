@@ -42,7 +42,7 @@ const Banner = () => {
       {stars}
       {isNotMobile && (
         <img
-          src="../../public/icons/LeftRectLine.svg"
+          src="/icons/LeftRectLine.svg"
           alt="hero icon"
           className="absolute h-full w-auto top-16 z-0 "
         />

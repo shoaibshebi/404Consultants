@@ -58,7 +58,6 @@ export default function Services() {
       <div className="flex flex-col gap-4">
         <div className="flex flex-col flex-wrap sm:flex-row gap-4 ">
           {tilesData.map((x, i) => {
-            console.log("i", i);
             return (
               <motion.div
                 key={i}
