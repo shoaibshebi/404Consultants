@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 
 import { tilesData } from "../utils/data";
 import { slideIn, staggerContainer, zoomIn } from "../utils/motion";
+import { TypingText } from "../Reusable/customTexts";
 
 export default function Services() {
   const numberOfStars = 10;
@@ -51,9 +52,10 @@ export default function Services() {
       className="flex flex-col justify-center relative w-[80%] mx-auto z-10 mb-10 2xl:max-w-[1280px] overflow-scroll"
     >
       {stars}
-      <div className="relative text-5xl leading-[32px] font-semibold py-8">
-        Other Services
-      </div>
+      <TypingText
+        title="Other Services"
+        textStyles="relative text-5xl leading-[32px] font-semibold py-8"
+      />
 
       <div className="flex flex-col gap-4">
         <div className="flex flex-col flex-wrap sm:flex-row gap-4 ">
