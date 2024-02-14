@@ -25,11 +25,11 @@ const ProcessBox: React.FC<ProcessBoxProps> = ({
   isNotMobile,
 }) => {
   return (
-    <div className='relative'>
+    <div className="relative">
       <img
         src={badgeIcon}
-        alt='Badge Icon'
-        className='absolute z-10 top-[-15px] left-[-15px] w-8 h-8 rounded-full'
+        alt="Badge Icon"
+        className="absolute z-10 top-[-15px] left-[-15px] w-8 h-8 rounded-full"
       />
       {isNotMobile && left && (
         <div
@@ -51,13 +51,13 @@ const ProcessBox: React.FC<ProcessBoxProps> = ({
         />
       )}
       <div
-        className={`relative border-[3px] overflow-x-auto h-[320px] md:max-h-[265px] md:h-[265px] max-w-[316px] ${bdrclr} bg-rich-blacks-main rounded-lg p-6`}
+        className={`relative border-[3px] no-scrollbar overflow-x-auto no-scrollbar h-[320px] md:max-h-[265px] md:h-[265px] max-w-[316px] ${bdrclr} bg-rich-blacks-main rounded-lg p-6`}
       >
-        <div className='overflow-scroll '>
-          <div className='flex items-center justify-start mb-4 '>
-            <h2 className='text-2xl text-start font-bold '>{title}</h2>
+        <div className="overflow-scroll no-scrollbar">
+          <div className="flex items-center justify-start mb-4 ">
+            <h2 className="text-2xl text-start font-bold ">{title}</h2>
           </div>
-          <p className='text-whites-04 text-2xl sm:text-sm lg:text-3xl'>
+          <p className="text-whites-04 text-2xl sm:text-sm lg:text-3xl">
             {desc}
           </p>
         </div>

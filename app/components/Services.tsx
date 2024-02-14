@@ -49,7 +49,7 @@ export default function Services() {
       initial="hidden"
       whileInView="show"
       viewport={{ once: true, amount: 0.25 }}
-      className="flex flex-col justify-center relative w-[80%] mx-auto z-10 mb-10 2xl:max-w-[1280px] overflow-scroll"
+      className="flex flex-col justify-center relative w-[80%] mx-auto z-10 mb-10 2xl:max-w-[1280px] overflow-scroll no-scrollbar"
     >
       {stars}
       <TypingText
