@@ -62,19 +62,16 @@ const Banner = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex relative flex-col justify-center items-center py-16">
         <div className="flex relative justify-center items-center md:w-[464px] md:h-[215px] w-[250px] h-[130px]">
           <motion.img
-            // variants={planetVariants("left")}
             src="/icons/four.svg"
             alt="logo"
             className="h-full w-full"
           />
           <motion.img
-            // variants={fadeIn("up", "spring", 0.3, 2)}
             src="/icons/zero.svg"
             alt="logo"
             className="h-[200px] w-[350px] md:h-[330px] md:w-[500px]"
           />
           <motion.img
-            // variants={planetVariants("right")}
             src="/icons/four.svg"
             alt="logo"
             className="h-full w-full"
