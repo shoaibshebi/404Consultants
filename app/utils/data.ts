@@ -1,5 +1,4 @@
 export const data = [
-  // phase 1
   {
     left: false,
     right: true,
@@ -21,7 +20,6 @@ export const data = [
     title: "Product Strategy & Planning",
     desc: "We define the design styles, structure, and guidelines for the product by creating a consistent visual language across the product like typography, color schemes and so on.",
   },
-  // phase 2
   {
     left: true,
     right: true,
@@ -43,7 +41,6 @@ export const data = [
     title: "Development",
     desc: "We define the design styles, structure, and guidelines for the product by creating a consistent visual language across the product like typography, color schemes and so on.",
   },
-  // phase 2
   {
     left: true,
     right: true,
