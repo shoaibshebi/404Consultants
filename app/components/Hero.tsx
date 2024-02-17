@@ -1,14 +1,23 @@
 // @ts-nocheck
 "use client";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { useMediaQuery } from "@mui/material";
-import { fadeIn, staggerContainer } from "../utils/motion";
+import { fadeIn, fadeInFromHidden, staggerContainer } from "../utils/motion";
 import { TypingText } from "../Reusable/customTexts";
 
 const Banner = () => {
   const numberOfStars = 25;
   const isNotMobile = useMediaQuery("(min-width:768px)");
+  const [timer1, setTimer1] = useState(false);
+
+  useEffect(() => {
+    // set timer after 2 secs
+    const timer = setTimeout(() => {
+      setTimer1(true);
+    }, 2000); // 2 secs
+    return () => clearTimeout(timer);
+  }, []);
 
   // TODO: Move this to utils
   const randomStyle = () => {
@@ -60,42 +69,39 @@ const Banner = () => {
       />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex relative flex-col justify-center items-center py-16">
-        <div className="flex relative justify-center items-center md:w-[464px] md:h-[215px] w-[250px] h-[130px]">
-          <motion.img
-            src="/icons/four.svg"
-            alt="logo"
-            className="h-full w-full"
-          />
-          <motion.img
+        <motion.div
+          variants={fadeInFromHidden("spring", 0.2, 30)}
+          className="flex relative justify-center items-center md:w-[464px] md:h-[215px] w-[250px] h-[130px]"
+        >
+          <img src="/icons/four.svg" alt="logo" className="h-full w-full" />
+          <img
             src="/icons/zero.svg"
             alt="logo"
             className="h-[200px] w-[350px] md:h-[330px] md:w-[500px]"
           />
-          <motion.img
-            src="/icons/four.svg"
-            alt="logo"
-            className="h-full w-full"
-          />
-        </div>
-        <div>
+          <img src="/icons/four.svg" alt="logo" className="h-full w-full" />
+        </motion.div>
+        <motion.div>
           <TypingText
+            delay={2}
             title="You are not lost"
             textStyles="text-center text-2xl md:text-21xl font-bold"
           />
           <TypingText
+            delay={4}
             title="You are exactly where you are meant to be."
             textStyles="text-2xl md:text-21xl font-bold"
           />
-          <img
-            src="/icons/RightLongLine.svg"
-            alt="hero icon"
-            className="absolute inset-x-0 h-full w-64 mx-auto bottom-[-30%] z-0 "
-          />
-        </div>
+        </motion.div>
+        <img
+          src="/icons/RightLongLine.svg"
+          alt="hero icon"
+          className="absolute inset-x-0 h-full w-64 mx-auto bottom-[-30%] z-0 "
+        />
       </div>
 
       <motion.div
-        variants={fadeIn("lt", "spring", 0.3, 2)}
+        variants={fadeInFromHidden("spring", 8, 2)}
         className="max-w-7xl px-4 my-8 sm:px-6 lg:px-8 flex flex-col mt-16 w-full md:w-3/4 relative "
       >
         <div className="absolute h-[100%] w-[40%] bottom-[-70%] left-[-40%] z-0 gradient-01 " />
@@ -107,6 +113,7 @@ const Banner = () => {
           />
         )}
         <TypingText
+          delay={8}
           title="one-stop software development"
           textStyles=" block   font-bold py-4 relative z-10"
         />

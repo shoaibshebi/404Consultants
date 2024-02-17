@@ -16,7 +16,7 @@ export const navVariants = {
     transition: {
       type: "spring",
       stiffness: 80,
-      delay: 1,
+      delay: 7,
     },
   },
 };
@@ -36,25 +36,17 @@ export const textVariant = (delay) => ({
   },
 });
 
-export const textContainer = {
+export const textContainer = (delay) => ({
   hidden: {
     opacity: 0,
   },
-  show: (i = 1) => ({
-    opacity: 1,
-    transition: { staggerChildren: 0.1, delayChildren: i * 0.05 },
-  }),
-};
-
-export const textContainerSpeedy = {
-  hidden: {
-    opacity: 0,
+  show: () => {
+    return {
+      opacity: 1,
+      transition: { staggerChildren: 0.1, delayChildren: delay },
+    };
   },
-  show: (i = 1) => ({
-    opacity: 1,
-    transition: { staggerChildren: 0.1, delayChildren: i * 0.001 },
-  }),
-};
+});
 
 export const textVariant2 = {
   hidden: {
@@ -140,6 +132,21 @@ export const _fadeIn = (direction, type, delay, duration) => ({
       delay,
       duration,
       ease: "easeOut",
+    },
+  },
+});
+export const fadeInFromHidden = (type, delay, duration) => ({
+  hidden: {
+    scale: 1,
+    opacity: 0,
+  },
+  show: {
+    opacity: 1,
+    transition: {
+      type,
+      delay,
+      duration,
+      ease: "easeIn",
     },
   },
 });
