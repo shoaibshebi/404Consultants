@@ -20,6 +20,24 @@ export const navVariants = {
     },
   },
 };
+
+// create a variant which is used to increase height of div from 0 to 100% in 1.5 seconds
+
+export const expandVariant = (height, delay, duration) => ({
+  hidden: {
+    height: 0,
+  },
+  show: {
+    height,
+    transition: {
+      type: "tween",
+      delay,
+      duration,
+      ease: "easeOut",
+    },
+  },
+});
+
 export const textVariant = (delay) => ({
   hidden: {
     y: 50,

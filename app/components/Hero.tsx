@@ -3,7 +3,12 @@
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { useMediaQuery } from "@mui/material";
-import { fadeIn, fadeInFromHidden, staggerContainer } from "../utils/motion";
+import {
+  expandVariant,
+  fadeIn,
+  fadeInFromHidden,
+  staggerContainer,
+} from "../utils/motion";
 import { TypingText } from "../Reusable/customTexts";
 
 const Banner = () => {
@@ -51,13 +56,15 @@ const Banner = () => {
     >
       {stars}
       {isNotMobile && (
-        <img
-          src="/icons/LeftRectLine.svg"
+        <motion.img
+          variants={expandVariant("100%", 0.2, 1.5)}
+          src="/icons/RightLongLine.svg"
           alt="hero icon"
-          className="absolute h-full w-auto top-16 z-0 "
+          className="absolute h-[50%] w-auto top-16 z-0 "
         />
       )}
-      <img
+      <motion.img
+        variants={expandVariant("50%", 0.2, 1.5)}
         src="/icons/RightLongLine.svg"
         alt="hero icon"
         className="absolute h-full w-auto top-16 right-32 z-0 "

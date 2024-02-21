@@ -5,7 +5,7 @@ import React from "react";
 
 import SecBtn from "../Reusable/SecBtn";
 import { cards } from "../utils/data";
-import { staggerContainer, zoomIn } from "../utils/motion";
+import { expandVariant, staggerContainer, zoomIn } from "../utils/motion";
 
 interface CardProps {
   img: string;
@@ -47,12 +47,14 @@ export default function About() {
       viewport={{ once: true, amount: 0.25 }}
       className="flex flex-col justify-center items-center relative w-[80%] mx-auto"
     >
-      <img
+      <motion.img
+        variants={expandVariant("10%", 0.2, 1.5)}
         src="/icons/smallLine.svg"
         alt="hero icon"
         className="absolute h-32 w-auto top-16 right-0 z-0 "
       />
-      <img
+      <motion.img
+        variants={expandVariant("10%", 0.2, 1.5)}
         src="/icons/smallLine.svg"
         alt="hero icon"
         className="absolute h-32 w-auto top-72 left-0 z-0 "
