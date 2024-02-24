@@ -104,7 +104,6 @@ export const slideIn = (
     },
   },
 });
-
 export const staggerContainer = (staggerChildren, delayChildren) => ({
   hidden: {},
   show: {
@@ -227,6 +226,55 @@ export const zoomIn = (delay, duration) => ({
     opacity: 1,
     transition: {
       type: "tween",
+      delay,
+      duration,
+      ease: "easeOut",
+    },
+  },
+});
+
+export const slideFromOrigin = (
+  direction,
+  type,
+  delay,
+  duration,
+  nMargin = "-100%",
+  pMargin = "100%"
+) => ({
+  hidden: {
+    x: 0,
+    y: 0,
+  },
+  show: {
+    x: direction === "left" ? nMargin : direction === "right" ? pMargin : 0,
+    y: direction === "up" ? nMargin : direction === "down" ? pMargin : 0,
+    transition: {
+      type,
+      delay,
+      duration,
+      ease: "easeOut",
+    },
+  },
+});
+export const slideNzoomOut = (
+  direction,
+  type,
+  delay,
+  duration,
+  nMargin = "-100%",
+  pMargin = "100%"
+) => ({
+  hidden: {
+    x: 0,
+    y: 0,
+  },
+  show: {
+    x: direction === "left" ? nMargin : direction === "right" ? pMargin : 0,
+    y: direction === "up" ? nMargin : direction === "down" ? pMargin : 0,
+    scale: 0,
+    opacity: 0,
+    transition: {
+      type,
       delay,
       duration,
       ease: "easeOut",
