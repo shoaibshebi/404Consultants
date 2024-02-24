@@ -15,7 +15,7 @@ interface CardProps {
 export default function About() {
   const Card = ({ img, title, desc }: CardProps) => (
     <div
-      className="rounded-xl bg-rich-blacks-main transition-shadow ease-in	delay-100	 hover:shadow-slate-100/50 shadow-lg  box-border  h-auto  flex flex-col items-start justify-end p-6 gap-[24px] mt-3 border-[2px] border-solid border-whites-01
+      className="rounded-xl bg-rich-blacks-main cursor-default transition-shadow ease-in	delay-100	 hover:shadow-slate-100/50 shadow-lg  box-border  h-auto  flex flex-col items-start justify-end p-6 gap-[24px] mt-3 border-[2px] border-solid border-whites-01
        
     "
     >
