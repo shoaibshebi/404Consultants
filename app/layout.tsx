@@ -28,6 +28,7 @@ export default function RootLayout({
       <body
         className={`${inter.className} bg-rich-blacks-main h-full relative`}
       >
+        <div className="absolute h-[100%] w-[40%] top-[70%] right-1 z-0  gradient-01 " />
         <Container>
           <Navbar />
           {children}
