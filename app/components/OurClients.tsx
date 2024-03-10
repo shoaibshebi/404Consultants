@@ -12,17 +12,17 @@ export default function OurClients() {
   ];
   return (
     <div
-      className='flex flex-col justify-start items-center relative w-[80%] mx-auto'
-      id='clients'
+      className="flex flex-col justify-start items-center relative w-[80%] mx-auto"
+      id="clients"
     >
-      <div className='absolute h-32 w-32 top-[20%] left-[-30%] z-0 gradient-02 ' />
-      <div className='mt-16'>
-        <SecBtn title='Our Clients' />
+      <div className="absolute h-32 w-32 top-[20%] left-[-30%] z-0 gradient-02 " />
+      <div className="mt-16">
+        <SecBtn title="Our Clients" />
       </div>
 
-      <div className='grid grid-cols-2 md:grid-cols-4 relative gap-16 my-16 w-full'>
+      <div className="grid grid-cols-2 md:grid-cols-4 relative gap-16 my-16 w-full">
         {icons.map((x, i) => (
-          <img key={i} className='w-full md:w-auto' alt='' src={x} />
+          <img key={i} className="w-full md:w-auto" alt="" src={x} />
         ))}
       </div>
     </div>
