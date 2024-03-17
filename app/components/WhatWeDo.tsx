@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import SecBtn from "../Reusable/SecBtn";
 import { planningData } from "../utils/data";
 import { slideIn, staggerContainer } from "../utils/motion";
+import WhatWeDoAnimation from "./WhatWeDoAnimation";
 
 const WhatWeDo = () => {
   const numberOfStars = 5;
@@ -25,9 +26,9 @@ const WhatWeDo = () => {
   const stars = Array.from({ length: numberOfStars }, (_, index) => (
     <img
       key={index}
-      src='/icons/star1.svg'
-      alt='Star'
-      className='tailwind-class'
+      src="/icons/star1.svg"
+      alt="Star"
+      className="tailwind-class"
       style={randomStyle()}
     />
   ));
@@ -38,32 +39,33 @@ const WhatWeDo = () => {
         className={`rounded-3xs flex flex-col justify-center items-center bg-rich-blacks-main box-border w-[135px] h-[136px] border-[3px] border-solid `}
         style={{ borderColor: bclr }}
       >
-        <img className='relative w-[52px] h-[52px]' alt='' src={img} />
-        <div className='relative leading-[24px] font-semibold'>{title}</div>
+        <img className="relative w-[52px] h-[52px]" alt="" src={img} />
+        <div className="relative leading-[24px] font-semibold">{title}</div>
       </div>
     );
   };
 
   return (
     <motion.div
-      id='whatwedo'
+      id="whatwedo"
       variants={staggerContainer}
-      initial='hidden'
-      whileInView='show'
+      initial="hidden"
+      whileInView="show"
       viewport={{ once: true, amount: 0.25 }}
-      className='flex flex-col justify-center items-center relative w-[80%] mx-auto mt-16'
+      className="flex flex-col justify-center items-center relative w-[80%] mx-auto mt-16"
     >
       {stars}
-      <div className='mb-4 md:mb-16'>
-        <SecBtn title='What we do' />
+      <div className="mb-4 md:mb-16">
+        <SecBtn title="What we do" />
       </div>
-      <div className='flex justify-center items-center relative my-16 w-full'>
+      <div className="flex justify-center items-center relative my-16 w-full">
         <div
-          className='absolute w-[100%] h-[450px] md:h-[300px] bg-cover  z-0'
+          className="absolute w-[100%] max-w-[895px] h-[450px] md:h-[328px] bg-cover md:bg-contain z-0 bg-no-repeat"
           style={{ backgroundImage: "url('/images/mesh.svg')" }}
         ></div>
+        <WhatWeDoAnimation />
 
-        <div className='grid grid-cols-2 md:grid-cols-5 gap-4'>
+        <div className="grid grid-cols-2 md:hidden gap-4">
           {planningData.map((x, i) => (
             <motion.div key={i} variants={slideIn("up", "tween", i * 0.1, 1)}>
               <PlanningCard {...x} />
