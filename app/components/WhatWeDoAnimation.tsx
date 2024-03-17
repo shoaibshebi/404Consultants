@@ -23,8 +23,6 @@ const WhatWeDoAnimation = () => {
       scrollTrigger: {
         trigger: "#whatwedo",
         start: "-70%",
-        end: "+=35%",
-        scrub: 1,
       },
     });
     iconAnimation
@@ -123,7 +121,7 @@ const WhatWeDoAnimation = () => {
         },
         {
           alpha: 1,
-          duration: 2,
+          duration: 1,
         }
       )
       .to(["#text1", "#text2", "#text3", "#text4", "#text5"], {
@@ -140,7 +138,7 @@ const WhatWeDoAnimation = () => {
         ],
         {
           scale: 1.5,
-          duration: 0.5,
+          duration: 1,
         },
         "<"
       );
